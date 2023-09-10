@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background-color: black;
+}
+.account{
+    width: 300px;
+    height: 450px;
+    border-radius: 20px;
+    background-color: white;
+    margin: auto;
+    margin-top: 5px;
+}
+form label{
+    display: flex;
+    margin: 10px 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+form input{
+    width: 70%;
+    padding: 7px;
+    margin-bottom: 9px;
+    
+    border: none;
+    background:transparent ;
+    color: black;
+    border-bottom: 2px solid orange;
+    margin-left: 15px;
+}
+input[type="button"]{
+    padding: 9px;
+    width: 100px;
+    border: 2px solid ;
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+   margin-top: 20px;
+   margin-right: 43px;
+   margin-left: 3px;
+   
+    
+}
+input[type="button"]:hover{
+    background-color:gray;
+    color: black;
+}
+ h3{
+    font-size: 20px;
+    padding: 14px;
+    align-items: center;
+    
+}
+  p{
+    align-items: center;
+    font-size: 17px;
+    margin-left: 10px;
+
+}
+a{
+    align-items: center;
+    margin-left: 15px;
+}
+input[type="checkbox"]{
+    margin-left: 30px;
+}
+button{
+    padding: 9px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    border: 2px ;
+    border-radius: 20px;
+    width: 250px;
+    background-color: orange;
+    color: black;
+}
+button:hover{
+    background-color: gray;
+}
