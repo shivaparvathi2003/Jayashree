@@ -9,7 +9,7 @@
   rel="stylesheet"
 />
 <link rel="stylesheet" href="style.css">
-<script src="app.js" defer></script>
+
   <title>Document</title>
   <script>
     function validation()
@@ -17,6 +17,17 @@
         var form=document.getElementById("form");
     var email=document.getElementById("email").value;
     var text=document.getElementById("text");
+    var username=document.getElementById("username").value;
+    var name=document.getElementById("name");
+    
+    var password=document.getElementById("password").value;
+    var userpassword=document.getElementById("userpassword");
+    
+    var cpassword=document.getElementById("cpassword").value;
+    var usercpassword=document.getElementById("usercpassword");
+    var pname= /^[A-Za-z .]{3,20}$/;
+    var pass=/^[A-Za-z]\w{7,14}$/;
+    
     
    
     var pattern= /^[^]+@[^]+\.[a-z]{2,3}$/;
@@ -38,7 +49,75 @@
         text.innerHTML="email is not valid";
         text.style.color="#ff0000";
 
+    }if(username.match(pname))
+{
+    form.classList.add("valid");
+    form.classList.remove("invalid");
+
+
+
+    name.innerHTML="name is vaid";
+    name.style.color="#00ff00";
+
+
+}
+else{
+    form.classList.add("invalid");
+    form.classList.remove("valid");
+    name.innerHTML="provide valid name";
+    name.style.color="#ff0000";
+
+}
+if(password.match(pass))
+{
+    form.classList.add("valid");
+    form.classList.remove("invalid");
+
+
+
+    userpassword.innerHTML="password is valid";
+    userpassword.style.color="#00ff00";
+
+
+}
+else{
+    form.classList.add("invalid");
+    form.classList.remove("valid");
+    userpassword.innerHTML=" provide strong password";
+    userpassword.style.color="#ff0000";
+
+}
+if(cpassword == password)
+{
+    form.classList.add("valid");
+    form.classList.remove("invalid");
+    usercpassword.innerHTML="password match";
+    usercpassword.style.color="#00ff00";
+   
+    
+}
+else{
+   
+    form.classList.add("invalid");
+    form.classList.remove("valid");
+    usercpassword.innerHTML="password does not match";
+    usercpassword.style.color="#ff0000";
+
+    
+    
+
+
+
+
+
     }
+
+  
+   
+   
+
+
+   
    
     
 }
@@ -68,14 +147,15 @@
         </div>
         <div class="input-group">
             <label for="passwosrd">Password</label>
-            <input type="password" id="password" name="password" onkeydown="validation()">
+            <input type="password" id="password" name="password" onkeyup="validation()">
             <span id="userpassword"></span>
             <div class="error"></div>
         </div>
         <div class="input-group">
             <label for="cpassword">Confirm Password</label>
-            <input type="password" id="cpassword" name="cpassword" onkeydown="validation()">
-            <span id="cpassword"></span>
+            <input type="password" id="cpassword" name="cpassword" onkeyup="validation()">
+            <span id="usercpassword"></span>
+            
             <div class="error"></div>
         </div>
       

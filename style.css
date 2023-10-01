@@ -15,7 +15,7 @@ body{
 .account{
     width: 50%;
     width: 350px;
-    height: 550px;
+    height: 650px;
     border-radius: 20px;
     background-color: white;
     margin: auto;
@@ -29,7 +29,7 @@ form label{
     font-family: 'Times New Roman', Times, serif;
 }
 form input{
-    width: 70%;
+    width: 75%;
     padding: 7px;
     margin-bottom: 9px;
     
@@ -92,4 +92,33 @@ button:hover{
 }
 .para1{
     margin-left: 30px;
+}
+#text{
+    display: block;
+    font-weight: 300;
+    padding: 5px;
+    font-style: normal;
+    margin-left: 5px;
+}
+#name{
+    display: block;
+    font-weight: 300;
+    padding: 5px;
+    font-style:normal;
+    margin-left: 5px;
+}
+#userpassword{
+    display: block;
+    font-weight: 300;
+    padding: 5px;
+    font-style:normal ;
+    margin-left: 5px;
+}
+#usercpassword{
+    display: block;
+    font-weight: 300;
+    padding: 5px;
+    font-style:normal ;
+    margin-left: 5px;
+
 }
