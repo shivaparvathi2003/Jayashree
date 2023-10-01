@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+  <title>Document</title>
+  <script>
+    function validation()
+    {
+        var form=document.getElementById("form");
+    var email=document.getElementById("email").value;
+    var text=document.getElementById("text");
+    
+   
+    var pattern= /^[^]+@[^]+\.[a-z]{2,3}$/;
+    if(email.match(pattern))
+    {
+        form.classList.add("valid");
+        form.classList.remove("invalid");
+   
+   
+   
+        text.innerHTML="email is valid";
+        text.style.color="#00ff00";
+
+
+    }
+    else{
+        form.classList.add("invalid");
+        form.classList.remove("valid");
+        text.innerHTML="email is not valid";
+        text.style.color="#ff0000";
+
+    }
+   
+    
+}
+    
+
+</script>
+  
+</head>
+<body>
+  
+  <div class="main">
+    <div class="account">
+      <h3>CREATE YOUR ACCOUNT</h3>
+      <form action="" id="form">
+        
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" onkeydown="validation()">
+            <span id="name"></span>
+            <div class="error"></div>
+        </div>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" onkeydown="validation()" >
+            <span id="text"></span>
+            <div class="error"></div>
+        </div>
+        <div class="input-group">
+            <label for="passwosrd">Password</label>
+            <input type="password" id="password" name="password" onkeydown="validation()">
+            <span id="userpassword"></span>
+            <div class="error"></div>
+        </div>
+        <div class="input-group">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" id="cpassword" name="cpassword" onkeydown="validation()">
+            <span id="cpassword"></span>
+            <div class="error"></div>
+        </div>
+      
+      
+              
+        <button type="submit">SIGN UP</button>
+        </form>
+      
+       <p>By clicking the sign up button you agree to our</p></br>
+      <input type="checkbox">
+      <a href="#">Terms and conditions</a><br><br>
+      <p class="para1">
+        Already haven account?<a href="login.html">Login here</a>
+      </p>
+
+      
+      
+      
+
+      </div>
+      
+    </div>
+  </div>
+  
+</body>
+</html>
+
