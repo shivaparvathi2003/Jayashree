@@ -87,15 +87,24 @@ else{
     userpassword.style.color="#ff0000";
 
 }
-if(cpassword == password)
+if(cpassword==='')
 {
-    form.classList.add("valid");
-    form.classList.remove("invalid");
-    usercpassword.innerHTML="password match";
-    usercpassword.style.color="#00ff00";
+    form.classList.add("invalid");
+    form.classList.remove("valid");
+    usercpassword.innerHTML="please enter a confirm password";
+    usercpassword.style.color="#ff0000";
+}
+else if(cpassword == password)
+{
+   
+form.classList.add("valid");
+form.classList.remove("invalid");
+usercpassword.innerHTML="password match";
+usercpassword.style.color="#00ff00";
    
     
 }
+
 else{
    
     form.classList.add("invalid");
@@ -135,13 +144,13 @@ else{
         
         <div class="input-group">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" onkeydown="validation()">
+            <input type="text" id="username" name="username" onkeyup="validation()">
             <span id="name"></span>
             <div class="error"></div>
         </div>
         <div class="input-group">
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" onkeydown="validation()" >
+            <input type="text" id="email" name="email" onkeyup="validation()" >
             <span id="text"></span>
             <div class="error"></div>
         </div>

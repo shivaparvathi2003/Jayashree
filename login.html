@@ -1,31 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Login </title>
-    <link rel="stylesheet" href="login.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="account">
-      <h1>LOGIN</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+ 
 
-      <form>
-        <div class="input-group">
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email" >
-          <div class="error"></div>
-      </div>
-      <div class="input-group">
-          <label for="passwosrd">Password</label>
-          <input type="password" id="password" name="password">
-          <div class="error"></div>
-      </div>
-      </form>
-      <button>LOGIN</button>
+<link rel="stylesheet" href="login.css">
+
+  <title>Document</title>
+  <script>
+    function validation()
+    {
+        var form=document.getElementById("form");
+    var email=document.getElementById("email").value;
+    var text=document.getElementById("text");
     
+    
+    var password=document.getElementById("password").value;
+    var userpassword=document.getElementById("userpassword");
+    
+   
+    
+    var pass=/^[A-Za-z]\w{7,14}$/;
+    
+    
+   
+    var pattern= /^[^]+@[^]+\.[a-z]{2,3}$/;
+    if(email.match(pattern))
+    {
+        form.classList.add("valid");
+        form.classList.remove("invalid");
+   
+   
+   
+        text.innerHTML="email is valid";
+        text.style.color="#00ff00";
+
+
+    }
+    else{
+        form.classList.add("invalid");
+        form.classList.remove("valid");
+        text.innerHTML="email is not valid";
+        text.style.color="#ff0000";
+
+    }
+if(password.match(pass))
+{
+    form.classList.add("valid");
+    form.classList.remove("invalid");
+
+
+
+    userpassword.innerHTML="password is valid";
+    userpassword.style.color="#00ff00";
+
+
+}
+else{
+    form.classList.add("invalid");
+    form.classList.remove("valid");
+    userpassword.innerHTML=" provide strong password";
+    userpassword.style.color="#ff0000";
+
+}
+
+}
+    
+
+</script>
+  
+</head>
+<body>
+  
+  <div class="main">
+    <div class="account">
+      <h3>Login</h3>
+      <form action="" id="form">
+        
+        
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" onkeyup="validation()" >
+            <span id="text"></span>
+            <div class="error"></div>
+        </div>
+        <div class="input-group">
+            <label for="passwosrd">Password</label>
+            <input type="password" id="password" name="password" onkeyup="validation()">
+            <span id="userpassword"></span>
+            <div class="error"></div>
+        </div>
+       
+    
+   
+ 
+      <button>LOGIN</button>
+    </form>
     <p >
       Forgot password?<a href="#">Click here</a><br><br>
       Not have an account? <a href="index.html">Sign Up Here</a>
